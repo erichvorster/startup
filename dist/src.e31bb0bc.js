@@ -8200,16 +8200,25 @@ navSlide();
 var tl = gsap.timeline({});
 tl.from('.logo', {
   ease: 'power2',
-  y: '-15px',
-  duration: 0.5,
+  duration: 1,
   opacity: 0
 });
 tl.from('.switch', {
   ease: 'power2',
   y: '-15px',
-  duration: 0.5,
+  duration: 1,
   opacity: 0,
   stagger: 0.2
+});
+tl.from('.navs', {
+  ease: 'power2',
+  duration: 2,
+  opacity: 0
+}, 0);
+tl.from('.hero', {
+  ease: 'power2',
+  duration: 2,
+  opacity: 0
 }, 0); //Hero Animations
 
 tl.from('.hero-greeting', {
@@ -8239,7 +8248,13 @@ tl.from('.hero-paragraph', {
 
 tl.from('.button-52', {
   ease: 'back',
-  duration: .6,
+  duration: .5,
+  opacity: 0,
+  x: '300px'
+});
+tl.from('.button-52:after', {
+  ease: 'back',
+  duration: 1,
   opacity: 0,
   x: '300px'
 });
@@ -8271,7 +8286,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55131" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50501" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -11120,7 +11120,7 @@ textarea.form-control-lg {
   }
 }
 .navs {
-  background-color: #d9d9d9;
+  background-color: black;
 }
 
 nav {
@@ -11131,8 +11131,8 @@ nav {
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   z-index: 4;
 }
 
@@ -11156,8 +11156,8 @@ nav {
 .switch {
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: 14px;
-  color: #231f20;
+  font-size: 12px;
+  color: #d9d9d9;
   position: relative;
 }
 
@@ -11246,23 +11246,25 @@ nav {
 .hero {
   height: 100vh;
   z-index: 1;
-  background-color: #d9d9d9;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/pexels-brad-kemp-10991993.925c5125.jpg);
+  background-size: cover;
+  background-color: #231f20;
 }
 
 .hero-greeting {
-  color: #00b188;
+  color: #d9d9d9;
 }
 
 .hero-future {
-  color: #00b188;
+  color: #d9d9d9;
 }
 
 .hero-description {
-  color: #00b188;
+  color: #d9d9d9;
 }
 
 .hero-paragraph {
-  color: #231f20;
+  color: #d9d9d9;
   max-width: 600px;
 }
 
@@ -11272,7 +11274,7 @@ nav {
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid #345260;
+  border: 1px solid #00b188;
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
@@ -11285,7 +11287,7 @@ nav {
 
 .button-52:after {
   content: "";
-  background-color: #345260;
+  background-color: #00b188;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -11305,9 +11307,15 @@ nav {
     padding: 13px 50px 13px;
   }
 }
+/* Mission */
+.mission-title {
+  color: #00b188;
+}
+
 /* GOAL */
 .goal {
-  background-color: #345260;
+  background-color: #d9d9d9;
+  height: 100vh;
 }
 
 .goal-svg {
@@ -11316,8 +11324,16 @@ nav {
 }
 
 /* SERVICES */
+.services {
+  background-color: #d9d9d9;
+}
+
+.services-title {
+  color: #00b188;
+}
+
 .service-card-body {
-  height: 440px;
+  height: 300px;
   min-width: 320px;
 }
 
@@ -11412,12 +11428,14 @@ main {
 /* PROJECTS */
 .card {
   transition: 0.5s;
+  background-color: #345260;
+  color: #d9d9d9;
 }
 
 .card:hover {
-  transform: translateY(-30px);
+  transform: translateY(-10px);
   cursor: pointer;
-  background-color: #ffe204;
+  background-color: #00b188;
 }
 
 .card-body {
@@ -11435,6 +11453,21 @@ main {
 
 /* CONTACT GRAPHIC */
 .contact-graphic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/bill-jelen-NVWyN8GamCk-unsplash-2.4249ad2b.jpg);
+  background-size: cover;
+}
+
+.contact-img {
+  height: 550px;
+  width: auto;
+}
+
+.contact-text {
+  background-color: #ffe204;
+}
+
+/* FOOTER */
+.footer {
   background-color: #00b188;
 }
 

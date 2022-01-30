@@ -13,7 +13,7 @@ $grey: #425563;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .navs {
-  background-color: $light;
+  background-color: black;
 }
 nav {
   display: flex;
@@ -23,8 +23,8 @@ nav {
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   z-index: 4;
 }
 .nav-links {
@@ -46,8 +46,8 @@ nav {
 .switch {
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: 14px;
-  color: $black;
+  font-size: 12px;
+  color: $light;
   position: relative;
 }
 
@@ -138,21 +138,25 @@ nav {
 .hero {
   height: 100vh;
   z-index: 1;
-  background-color: $light;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url(../assets/pexels-brad-kemp-10991993.jpg);
+  background-size: cover;
+  background-color: $black;
 }
+
 .hero-greeting {
-  color: $green;
+  color: $light;
 }
 .hero-future {
-  color: $green;
+  color: $light;
 }
 
 .hero-description {
-  color: $green;
+  color: $light;
 }
 
 .hero-paragraph {
-  color: $black;
+  color: $light;
   max-width: 600px;
 }
 
@@ -162,7 +166,7 @@ nav {
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid $navy;
+  border: 1px solid $green;
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
@@ -175,7 +179,7 @@ nav {
 
 .button-52:after {
   content: "";
-  background-color: $navy;
+  background-color: $green;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -196,19 +200,34 @@ nav {
   }
 }
 
+/* Mission */
+
+.mission-title {
+  color: $green;
+}
+
 /* GOAL */
 
 .goal {
-  background-color: $navy;
+  background-color: $light;
+  height: 100vh;
 }
 
 .goal-svg {
   height: 300px;
   width: auto;
 }
+
 /* SERVICES */
+
+.services {
+  background-color: $light;
+}
+.services-title {
+  color: $green;
+}
 .service-card-body {
-  height: 440px;
+  height: 300px;
   min-width: 320px;
 }
 
@@ -301,12 +320,14 @@ main {
 
 .card {
   transition: 0.5s;
+  background-color: $navy;
+  color: $light;
 }
 
 .card:hover {
-  transform: translateY(-30px);
+  transform: translateY(-10px);
   cursor: pointer;
-  background-color: $yellow;
+  background-color: $green;
 }
 
 .card-body {
@@ -325,5 +346,20 @@ main {
 /* CONTACT GRAPHIC */
 
 .contact-graphic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url(../assets//bill-jelen-NVWyN8GamCk-unsplash-2.jpg);
+  background-size: cover;
+}
+.contact-img {
+  height: 550px;
+  width: auto;
+}
+.contact-text {
+  background-color: $yellow;
+}
+
+/* FOOTER */
+
+.footer {
   background-color: $green;
 }
