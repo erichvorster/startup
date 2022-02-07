@@ -11119,6 +11119,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: black;
+}
+
 .navs {
   background-color: black;
 }
@@ -11143,6 +11147,11 @@ nav {
   width: 40%;
   z-index: 3;
   padding-top: 8px;
+  background-color: black;
+}
+
+.nav-container {
+  background-color: black;
 }
 
 .nav-links li {
@@ -11205,7 +11214,7 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #212529;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11225,7 +11234,8 @@ nav {
   }
 
   .switch {
-    font-size: 50px;
+    font-size: 25px;
+    color: #00b188;
   }
 }
 .nav-active {
@@ -11242,6 +11252,11 @@ nav {
     transform: translateX(0px);
   }
 }
+/* GRID */
+.grid-block {
+  height: 250px;
+}
+
 /* HERO SECTION */
 .hero {
   height: 100vh;
@@ -11260,7 +11275,7 @@ nav {
 }
 
 .hero-description {
-  color: #d9d9d9;
+  color: #00b188;
 }
 
 .hero-paragraph {
@@ -11312,6 +11327,10 @@ nav {
   color: #00b188;
 }
 
+.mission-pitch {
+  color: #345260;
+}
+
 /* GOAL */
 .goal {
   background-color: #d9d9d9;
@@ -11335,60 +11354,6 @@ nav {
 .service-card-body {
   height: 300px;
   min-width: 320px;
-}
-
-.bi-code-slash {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-.bi-pencil-fill {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-.bi-mask {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-.bi-body-text {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-.bi-search {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 0.08);
-  z-index: 10;
-}
-
-.bi-megaphone-fill {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 0.08);
-  z-index: 10;
 }
 
 /* FEATURES */
@@ -11429,13 +11394,17 @@ main {
 .card {
   transition: 0.5s;
   background-color: #345260;
-  color: #d9d9d9;
+  color: #212529;
 }
 
 .card:hover {
   transform: translateY(-10px);
   cursor: pointer;
   background-color: #00b188;
+}
+
+.icon-container icon:hover {
+  color: #ffe204;
 }
 
 .card-body {
