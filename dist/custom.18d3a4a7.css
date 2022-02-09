@@ -11121,6 +11121,7 @@ textarea.form-control-lg {
 }
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .navs {
@@ -11253,8 +11254,93 @@ nav {
   }
 }
 /* GRID */
-.grid-block {
-  height: 250px;
+.grid-block-1 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/dev.cb012e23.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-1:hover {
+  transform: scale(1.05);
+}
+
+.grid-block-2 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/copywriting.fd4505e8.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-2:hover {
+  transform: scale(1.05);
+}
+
+.grid-block-3 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/ui.e4135c01.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-3:hover {
+  transform: scale(1.05);
+}
+
+.grid-block-4 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/marketing.9e0b11b7.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-4:hover {
+  transform: scale(1.05);
+}
+
+.grid-block-5 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/analytics.e1abf278.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-5:hover {
+  transform: scale(1.05);
+}
+
+.grid-block-6 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/graphic.bbf5a79d.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-6:hover {
+  transform: scale(1.05);
+}
+
+.grid-block-7 {
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/dev.cb012e23.jpg);
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.grid-block-7:hover {
+  transform: scale(1.05);
+}
+
+.grid-content {
+  color: #d9d9d9;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(-10px);
+}
+
+.grid-content:hover {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /* HERO SECTION */
@@ -11343,57 +11429,9 @@ nav {
 }
 
 /* SERVICES */
-.services {
-  background-color: #d9d9d9;
-}
-
-.services-title {
-  color: #00b188;
-}
-
-.service-card-body {
-  height: 300px;
-  min-width: 320px;
-}
-
-/* FEATURES */
-main {
-  height: 100vh;
-  background-color: #00b188;
-}
-
-.row {
-  height: 600pxvh;
-}
-
-.feature-img {
-  padding: 5px;
-}
-
-.feature-card {
-  height: 80%;
-  width: 80%;
-  background-color: #d9d9d9;
-  border-radius: 5px;
-}
-
-.accordion {
-  border-radius: 5px;
-}
-
-.accordion-item {
-  background-color: #d9d9d9;
-  border-radius: 5px;
-}
-
-.accordion-button {
-  background-color: #d9d9d9;
-}
-
-/* PROJECTS */
 .card {
   transition: 0.5s;
-  background-color: #345260;
+  background-color: #d9d9d9;
   color: #212529;
 }
 
@@ -11403,13 +11441,9 @@ main {
   background-color: #00b188;
 }
 
-.icon-container icon:hover {
-  color: #ffe204;
-}
-
 .card-body {
-  height: 330px;
-  min-width: 320px;
+  height: 250px;
+  min-width: 240px;
 }
 
 .project-number {
