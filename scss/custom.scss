@@ -2,6 +2,7 @@ $green: #00b188;
 $black: #231f20;
 $navy: #345260;
 $light: #d9d9d9;
+$primary: #00b188;
 
 /* SECONDARY COLORS */
 
@@ -13,9 +14,14 @@ $grey: #425563;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body {
-  background-color: black;
+  background-color: $light;
   overflow-x: hidden;
 }
+
+.heading {
+  color: $green;
+}
+
 .navs {
   background-color: black;
 }
@@ -234,7 +240,7 @@ nav {
   height: 100vh;
   z-index: 1;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
-    url(../assets/pexels-brad-kemp-10991993.jpg);
+    url(../assets/hero-img2.jpg);
   background-size: cover;
   background-color: $black;
 }
@@ -320,7 +326,7 @@ nav {
 }
 
 .card {
-  transition: 0.5s;
+  transition: 0.2s;
   background-color: $light;
   color: $dark;
 }
@@ -329,6 +335,7 @@ nav {
   transform: translateY(-10px);
   cursor: pointer;
   background-color: $green;
+  color: $light;
 }
 
 .card-body {
@@ -339,9 +346,19 @@ nav {
 .project-number {
   position: absolute;
   right: 20px;
-  top: -10px;
-  font-size: 100px;
+  top: 10px;
+  height: 70px;
+  width: 70px;
   color: rgba(0, 0, 0, 0.05);
+}
+/* BLOG */
+
+/*CTA*/
+
+.cta-img {
+  height: 400px;
+  width: auto;
+  border-radius: 5px;
 }
 
 /* CONTACT GRAPHIC */
@@ -360,7 +377,3 @@ nav {
 }
 
 /* FOOTER */
-
-.footer {
-  background-color: $navy;
-}
