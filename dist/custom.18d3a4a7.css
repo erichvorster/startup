@@ -11121,7 +11121,6 @@ textarea.form-control-lg {
 }
 body {
   background-color: #d9d9d9;
-  overflow-x: hidden;
 }
 
 .heading {
@@ -11257,96 +11256,6 @@ nav {
     transform: translateX(0px);
   }
 }
-/* GRID */
-.grid-block-1 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/dev.cb012e23.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-1:hover {
-  transform: scale(1.05);
-}
-
-.grid-block-2 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/copywriting.fd4505e8.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-2:hover {
-  transform: scale(1.05);
-}
-
-.grid-block-3 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/ui.e4135c01.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-3:hover {
-  transform: scale(1.05);
-}
-
-.grid-block-4 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/marketing.9e0b11b7.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-4:hover {
-  transform: scale(1.05);
-}
-
-.grid-block-5 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/analytics.e1abf278.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-5:hover {
-  transform: scale(1.05);
-}
-
-.grid-block-6 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/graphic.bbf5a79d.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-6:hover {
-  transform: scale(1.05);
-}
-
-.grid-block-7 {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/dev.cb012e23.jpg);
-  background-size: cover;
-  transition: transform 0.2s;
-}
-
-.grid-block-7:hover {
-  transform: scale(1.05);
-}
-
-.grid-content {
-  color: #d9d9d9;
-  opacity: 0;
-  transition: 0.3s;
-  transform: translateY(-10px);
-}
-
-.grid-content:hover {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
 /* HERO SECTION */
 .hero {
   height: 100vh;
@@ -11364,6 +11273,12 @@ nav {
   color: #d9d9d9;
 }
 
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
 .hero-description {
   color: #00b188;
 }
@@ -11412,13 +11327,52 @@ nav {
     padding: 13px 50px 13px;
   }
 }
-/* Mission */
+/* MISSION */
 .mission-title {
   color: #00b188;
 }
 
 .mission-pitch {
   color: #345260;
+}
+
+/* GRID */
+.slider-wrap {
+  position: relative;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4000px;
+  display: flex;
+  will-change: transform;
+  background-color: black;
+}
+
+.slider-item {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
+.img-div {
+  position: relative;
+  left: 1%;
+  top: 2.5%;
+  width: 98%;
+  height: 95%;
+  background-size: cover;
+  background-position: center;
+  background-color: #00b188;
 }
 
 /* GOAL */
@@ -11433,16 +11387,85 @@ nav {
 }
 
 /* SERVICES */
-.card {
+.card-1 {
   transition: 0.2s;
   background-color: #d9d9d9;
   color: #212529;
 }
 
-.card:hover {
+.card-2 {
+  transition: 0.2s;
+  background-color: #d9d9d9;
+  color: #212529;
+}
+
+.card-3 {
+  transition: 0.2s;
+  background-color: #d9d9d9;
+  color: #212529;
+}
+
+.card-4 {
+  transition: 0.2s;
+  background-color: #d9d9d9;
+  color: #212529;
+}
+
+.card-5 {
+  transition: 0.2s;
+  background-color: #d9d9d9;
+  color: #212529;
+}
+
+.card-6 {
+  transition: 0.2s;
+  background-color: #d9d9d9;
+  color: #212529;
+}
+
+.card-1:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  background-color: #634768;
+  color: #d9d9d9;
+}
+
+.card-2:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  background-color: #231f20;
+  color: #d9d9d9;
+}
+
+.card-3:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  background-color: #f68c70;
+  color: #d9d9d9;
+}
+
+.card-4:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  background-color: #425563;
+  color: #d9d9d9;
+}
+
+.card-5:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  background-color: #345260;
+  color: #d9d9d9;
+}
+
+.card-6:hover {
   transform: translateY(-10px);
   cursor: pointer;
   background-color: #00b188;
+  color: #d9d9d9;
+}
+
+.card:hover .project-number {
   color: #d9d9d9;
 }
 

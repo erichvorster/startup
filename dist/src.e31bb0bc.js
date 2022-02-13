@@ -8176,6 +8176,18 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var navSlide = function navSlide() {
   var burger = document.querySelector('.burger');
   var nav = document.querySelector('.nav-links');
@@ -8221,12 +8233,6 @@ tl.from('.hero', {
   opacity: 0
 }, 0); //Hero Animations
 
-tl.from('.hero-greeting', {
-  ease: 'power1',
-  duration: 0.5,
-  opacity: 0,
-  y: 10
-});
 tl.from('.hero-future', {
   ease: 'power1',
   duration: 0.5,
@@ -8251,13 +8257,76 @@ tl.from('.button-52', {
   duration: .5,
   opacity: 0,
   x: '300px'
+}); // GALLERY SLIDER
+
+var sliderWrap = document.querySelector('.slider-wrap');
+var slider = document.querySelector('.slider');
+var clonesWidth;
+var sliderWidth;
+var clones = [];
+var disableScroll = false;
+var scrollPos;
+
+var items = _toConsumableArray(document.querySelectorAll('.slider-item'));
+
+console.log(items);
+
+var images = _toConsumableArray(document.querySelectorAll('.img-div'));
+
+images.forEach(function (img, idx) {
+  img.style.backgroundImage = "url(../images/".concat(idx + 1, ")");
 });
-tl.from('.button-52:after', {
-  ease: 'back',
-  duration: 1,
-  opacity: 0,
-  x: '300px'
+item.forEach(function (item) {
+  var clone = item.cloneNode(true);
+  clone.ClassList.add('clone');
+  slider.appendChild(clone);
+  clones.push(clone);
 });
+
+function getClonesWidth() {
+  var width = 0;
+  clones.forEach(function (clone) {
+    width += clone.offsetWidth;
+  });
+  return width;
+}
+
+function getScrollPos() {
+  return window.scrollY;
+}
+
+function scrollUpdate() {
+  scrollPos = getScrollPos();
+
+  if (clonesWidth + scrollPos >= sliderWidth) {
+    window.scrollTo({
+      top: 1
+    });
+  } else if (scrollPos <= 0) {
+    window.scrollTo({
+      top: sliderWidth - clonesWidth - 1
+    });
+  }
+
+  slider.style.transform = "translateX(".concat(-window.scrollY, "px)");
+  requestAnimationFrame(scrollUpdate);
+}
+
+function onLoad() {
+  calculateDimensions();
+  document.body.style.height = "".concat(sliderWidth, "px");
+  window.scrollTo({
+    top: 1
+  });
+  scrollUpdate();
+}
+
+function calculateDimensions() {
+  sliderWidth = slider.getBoundingClientRect().width;
+  clonesWidth = getClonesWidth();
+}
+
+onLoad();
 },{"bootstrap":"../node_modules/bootstrap/dist/js/bootstrap.esm.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -8286,7 +8355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54602" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49682" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
