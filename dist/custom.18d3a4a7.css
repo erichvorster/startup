@@ -11129,7 +11129,7 @@ body {
 }
 
 .navs {
-  background-color: black;
+  background-color: #d9d9d9;
 }
 
 nav {
@@ -11152,11 +11152,11 @@ nav {
   width: 40%;
   z-index: 3;
   padding-top: 8px;
-  background-color: black;
+  background-color: #d9d9d9;
 }
 
 .nav-container {
-  background-color: black;
+  background-color: #d9d9d9;
 }
 
 .nav-links li {
@@ -11171,7 +11171,7 @@ nav {
   text-decoration: none;
   letter-spacing: 1px;
   font-size: 12px;
-  color: #d9d9d9;
+  color: #212529;
   position: relative;
 }
 
@@ -11219,7 +11219,7 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: black;
+    background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11241,7 +11241,7 @@ nav {
 
   .switch {
     font-size: 25px;
-    color: #00b188;
+    color: #212529;
   }
 }
 .nav-active {
@@ -11262,17 +11262,6 @@ nav {
 .hero {
   height: 100vh;
   z-index: 1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/hero-img2.3678d72b.jpg);
-  background-size: cover;
-  background-color: #231f20;
-}
-
-.hero-greeting {
-  color: #d9d9d9;
-}
-
-.hero-future {
-  color: #d9d9d9;
 }
 
 @keyframes typing {
@@ -11286,7 +11275,6 @@ nav {
 }
 
 .hero-paragraph {
-  color: #d9d9d9;
   max-width: 600px;
 }
 
@@ -11330,51 +11318,26 @@ nav {
   }
 }
 /* MISSION */
+.mission {
+  background: #345260;
+}
+
 .mission-title {
   color: #00b188;
 }
 
 .mission-pitch {
-  color: #345260;
+  color: #d9d9d9;
 }
 
-/* GRID */
-.slider-wrap {
-  position: relative;
-  top: 20%;
-  left: 10%;
-  width: 80%;
-  height: 600px;
-  overflow: hidden;
+/*PROJECT CAROUSEL*/
+.carousel {
+  height: 80vh;
 }
 
-.slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 4000px;
-  display: flex;
-  will-change: transform;
-  background-color: black;
-}
-
-.slider-item {
-  position: relative;
-  flex: 1;
-  overflow: hidden;
-  filter: grayscale(100%);
-}
-
-.img-div {
-  position: relative;
-  left: 1%;
-  top: 2.5%;
-  width: 98%;
-  height: 95%;
-  background-size: cover;
-  background-position: center;
-  background-color: #00b188;
+.carousel-img {
+  object-fit: contain;
+  width: 50%;
 }
 
 /* GOAL */
@@ -11509,5 +11472,44 @@ nav {
 }
 
 /* FOOTER */
+/* SERVICES */
+.services-hero {
+  height: 60vh;
+  background: #212529;
+}
+
+.services-content {
+  padding: 140px 20px;
+}
+
+.service-img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.services-cta {
+  height: 20vh;
+}
+
+/*CONTACT US*/
+.contact-container {
+  height: 100vh;
+}
+
+.contact-img {
+  height: 100%;
+  background-image: url(/bill-jelen-NVWyN8GamCk-unsplash-2.4249ad2b.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 90%;
+  height: 40%;
+  z-index: 5;
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=/custom.18d3a4a7.css.map */
