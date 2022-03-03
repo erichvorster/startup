@@ -34,19 +34,67 @@
      </section>
 
 
-     <!--CONTACT-->
-
-      <!--HERO-->
-   <section class="services-hero">
-    <div class="container services-content text-light">
-      <h1>Contact</h1>
-      <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dignissimos.</p>
-    </div>
-  </section>
-
   
+
+    <!--Contact-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col col-12 col-lg-6 pt-5 "> 
+            <div class="card contact-form">
+              <div class="px-3">
+                <h2 class=" pt-5 display-6 text-primary">Contact us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum quod ipsum, dolores beatae qui ea doloribus molestiae! Id debitis at corporis, nobis mollitia voluptatem quaerat impedit quam voluptatibus nihil velit error praesentium.</p>
+              </div>
+              <div class="card-body ">
+                <div class="input-group mb-3">
+                  <input type="text" class=" effect-1" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
+                  <span class="focus-border"></span>
+                </div>
+                <div class="input-group mb-3">
+                  <input type="text" class=" effect-1" placeholder="Contact" aria-label="Username" aria-describedby="basic-addon1">
+                  <span class="focus-border"></span>
+                </div>
+                <div class="input-group mb-3">
+                  <input type="text" class=" effect-1" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                  <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                  <textarea class="effect-1" placeholder="Your Message" aria-label="With textarea"></textarea>
+                  <span class="focus-border"></span>
+                </div>
+                <button type="button" class="btn btn-primary btn mt-3 contact-button">Large button</button>
+              </div>
+            
+          
+              </div>
+              
+            </div>
+
+          <div class="col py-5">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+   <script>function initMap() {
+  var options = {
+    zoom: 8,
+    center: {
+      lat: 42.3601,
+      lng: -71.0589
+    }
+  };
+  var map = new google.maps.Map(document.getElementById('map'), options);
+}</script>
+   <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
    <script src="/src.e31bb0bc.js"></script>
 </body>
 </html>
+
+

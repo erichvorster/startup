@@ -158,3 +158,6 @@ function calculateDimensions (){
 }
 
 onLoad();
+
+//Google Maps API
+

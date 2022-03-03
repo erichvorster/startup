@@ -157,11 +157,6 @@ nav {
   z-index: 1;
 }
 
-.hero-greeting {
-}
-.hero-future {
-}
-
 @keyframes typing {
   100% {
     left: 100%;
@@ -216,6 +211,12 @@ nav {
   }
 }
 
+//HOOK
+
+.hook-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
 /* MISSION */
 .mission {
   background: $navy;
@@ -229,14 +230,6 @@ nav {
 }
 
 /*PROJECT CAROUSEL*/
-.carousel {
-  height: 80vh;
-}
-
-.carousel-img {
-  object-fit: contain;
-  width: 50%;
-}
 
 /* GOAL */
 
@@ -339,15 +332,8 @@ nav {
   width: 70px;
   color: rgba(0, 0, 0, 0.05);
 }
-/* BLOG */
 
-/*CTA*/
-
-.cta-img {
-  height: 400px;
-  width: auto;
-  border-radius: 5px;
-}
+//PROCESS
 
 /* CONTACT GRAPHIC */
 
@@ -408,4 +394,134 @@ nav {
   height: 40%;
   z-index: 5;
   margin: 0 auto;
+}
+
+//Contact Page
+#map {
+  height: 90vh;
+  width: 100%;
+}
+
+.contact-form {
+  height: 90vh;
+}
+
+.effect-1 {
+  border: 0;
+  outline: none;
+  width: 100%;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: $light;
+}
+
+.effect-1 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #00b188;
+  transition: 0.4s;
+}
+
+.effect-1:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+
+.contact-button {
+  border-radius: 0;
+}
+
+//Projects
+
+.projects-section {
+}
+
+.project-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient($green, $orange);
+  clip-path: circle(30% at right 70%);
+  z-index: 2;
+}
+.project-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient($yellow, $green);
+  clip-path: circle(20% at 10% 10%);
+  z-index: 2;
+}
+
+.project-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.container .project {
+  position: relative;
+  width: 290px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: rgba(225, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 3;
+}
+
+.project-container .project .project-content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+.project-container .project:hover .project-content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.project-container .project .project-content h2 {
+  position: absolute;
+  top: -40px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.project-container .project .project-content h3 {
+  font-size: 1.8em;
+  color: $black;
+  z-index: 1;
+}
+
+.project-container .project .project-content p {
+  font-size: 1em;
+  color: $black;
+  font-weight: 300;
+}
+.project-container .project .project-content a {
+  position: relative;
 }
