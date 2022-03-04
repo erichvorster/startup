@@ -11335,7 +11335,6 @@ nav {
   color: #d9d9d9;
 }
 
-/*PROJECT CAROUSEL*/
 /* GOAL */
 .goal {
   background-color: #d9d9d9;
@@ -11444,6 +11443,96 @@ nav {
   color: rgba(0, 0, 0, 0.05);
 }
 
+.timeline-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  padding: 100px 0;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: #345260;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline-content h1, .timeline-content .h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #345260;
+  }
+
+  .timeline ul li {
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    border-radius: 0px 20px 20px 20px;
+    transform: translateX(-1px);
+  }
+
+  .timeline ul li::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #345260;
+    border-radius: 50%;
+    top: 0;
+  }
+
+  .timeline ul li:nth-child(odd)::after {
+    transform: translate(50%, -50%);
+    right: -14px;
+  }
+
+  .timeline ul li:nth-child(even)::after {
+    transform: translate(-50%, -50%);
+    left: -15px;
+  }
+
+  .timeline ul li:hover:after {
+    background-color: #00b188;
+  }
+}
 /* CONTACT GRAPHIC */
 .contact-graphic {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/bill-jelen-NVWyN8GamCk-unsplash-2.4249ad2b.jpg);
